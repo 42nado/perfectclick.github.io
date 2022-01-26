@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  max-width: 100%;
+    overflow-x: hidden;
+}
+
+a.active  {
+color: white;
+background-color: black;
+
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+nav{
+  background: #ffffff;
+  height: 80px;
+  width: 100%;
+  
+}
+nav img{
+    width: 80px;
+    height: 55px;
+    position: absolute;
+    top: 10px;
+    left: 8%;
+}
+nav ul{
+  float: right;
+  margin-right: 50px;
+  
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+nav ul li a{
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 10px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+nav ul li a:before{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;}
+
+label #btn,
+label #cancel{
+
+color: rgb(0, 0, 0);
+font-size: 30px;
+float: right;
+line-height: 80px;
+margin-right: 40px;
+cursor: pointer;
+display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1118px) {
+  nav img{
+    left: 8%;
+  }
+}
+@media (max-width: 944px) {
+  nav img{
+    left: 6%;
+    top: 10px;
+    width: 80px;
+    height: 55px;
+  }
+  nav ul li a{
+    z-index: 9999;
+      font-size: 17px;
+  }
+}
+@media (max-width: 860px) {
+  label #btn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #ffffff;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+  }
+
+  nav ul li a{
+      font-size: 20px;
+  }
+  #check:checked ~ ul{
+      left: 0;
+    }
+    #check:checked ~ label #btn{
+      display: none;
+    }
+    #check:checked ~ label #cancel{
+      display: block;
+    }
+}
+.mainPic {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 94%;
+  height: 80%;
+  object-fit: cover;
+  z-index:-9999;
+}
+
+
+.quote {
+  position: absolute;
+  width: 20%;
+  height: 35%;
+  top: 35%;
+  left: 40%;
+  animation: slideUp 0.75s ease-in-out forwards;
+  z-index:-9999;
+}
+a.explore {
+  position: absolute;
+  font-family: monospace;
+  font-size: 2vh;
+  font-size: 0.8vw;
+  color: black;
+  border: 2px solid;
+  border-radius: 10%;
+  padding: 0.4%;
+  padding-top: 0.3%;
+  padding-bottom: 0.3%;
+  top: 62%;
+  left: 48%;
+  animation: fade 1.5s ease-in;
+  z-index:-9999;
+}
+a.explore:hover {
+  color: white;
+  background-color: black;
+
+}
+.keyword {
+  position: absolute;
+  font-size: 1vw;
+  font-size: 1.5vh;
+  font-family: monospace;
+  top: 95%;
+  left: 5%;
+  color: black;
+  z-index:-9999;
+}
+.socmed {
+  position: absolute;
+  width: 5%;
+  height: 4%;
+  top: 91%;
+  right: 5%;
+  z-index:-9999;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.box{
+  z-index:-9999;
+}

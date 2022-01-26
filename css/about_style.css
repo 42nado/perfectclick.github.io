@@ -1,0 +1,325 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  max-width: 100%;
+    overflow-x: hidden;
+}
+
+a.active  {
+color: white;
+background-color: black;
+
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+nav{
+  background: #ffffff;
+  height: 80px;
+  width: 100%;
+  
+}
+nav img{
+    width: 80px;
+    height: 55px;
+    position: absolute;
+    top: 10px;
+    left: 8%;
+}
+nav ul{
+  float: right;
+  margin-right: 50px;
+  
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+nav ul li a{
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 10px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+nav ul li a:before{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;}
+
+label #btn,
+label #cancel{
+
+color: rgb(0, 0, 0);
+font-size: 30px;
+float: right;
+line-height: 80px;
+margin-right: 40px;
+cursor: pointer;
+display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1118px) {
+  nav img{
+    left: 8%;
+  }
+}
+@media (max-width: 944px) {
+  nav img{
+    left: 6%;
+    top: 10px;
+    width: 80px;
+    height: 55px;
+  }
+  nav ul li a{
+    z-index: 9999;
+      font-size: 17px;
+  }
+}
+@media (max-width: 860px) {
+  label #btn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #ffffff;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+  }
+
+  nav ul li a{
+      font-size: 20px;
+  }
+  #check:checked ~ ul{
+      left: 0;
+    }
+    #check:checked ~ label #btn{
+      display: none;
+    }
+    #check:checked ~ label #cancel{
+      display: block;
+    }
+}
+
+
+.box {
+  position: absolute;
+  top: 12%;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 94%;
+  background-color: #1a1a1a;
+  z-index:-9999;
+}
+.wrap {
+  margin-top: 13%;
+}
+.anibackground {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+.wrap h1 {
+  position: absolute;
+  font-family: monospace;
+  top: 4.5%;
+  left: 30%;
+  right: 30%;
+  font-size: 10vh;
+  font-size: 2.5vw;
+  text-align: center;
+  padding-bottom: 5%;
+}
+.group {
+  display: flex;
+  text-align: center;
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.group .member {
+  position: absolute;
+  background: black;
+  border: 3px solid white;
+  top: 4%;
+  margin-top: 2%;
+  margin: 1%;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: whitesmoke;
+  position: relative;
+  animation: slideDown 0.75s ease-in-out;
+}
+.group .member h3 {
+  color: white;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.group .member p.role {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+.group .member .pics {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 35%;
+  animation: bounce 0.75s 0.75s ease-in-out;
+}
+.group .member .pics img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+.shape div {
+  display: flex;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+.shape div:nth-child(1) {
+  top: 0%;
+  left: 0%;
+  animation: animate 10s linear infinite;
+}
+.shape div:nth-child(2) {
+  top: 35%;
+  left: 20%;
+  animation: animate 7s linear infinite;
+}
+.shape div:nth-child(3) {
+  top: 15%;
+  left: 60%;
+  animation: animate 9s linear infinite;
+}
+.shape div:nth-child(4) {
+  top: 45%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+}
+.shape div:nth-child(5) {
+  top: 60%;
+  left: 70%;
+  animation: animate 6s linear infinite;
+}
+.shape div:nth-child(6) {
+  top: 60%;
+  left: 40%;
+  animation: animate 12s linear infinite;
+}
+.shape div:nth-child(7) {
+  top: -5%;
+  left: 85%;
+  animation: animate 10s linear infinite;
+}
+.shape div:nth-child(8) {
+  top: 65%;
+  left: 10%;
+  animation: animate 10s linear infinite;
+}
+.shape div:nth-child(9) {
+  top: 5%;
+  left: 30%;
+  animation: animate 10s linear infinite;
+}
+.shape div:nth-child(10) {
+  top: 30%;
+  left: 50%;
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(180px) rotate(360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.8) translateY(0) rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-20px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  45% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.title {
+  color: #E2E8F0;
+  position: relative;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5vw;
+  top: 25px;
+  font-family: monospace;
+  font-weight: bolder;
+}
